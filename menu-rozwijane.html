@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu rozwijane</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><h1>Menu rozwijane</h1></header>
+<nav><a href="index.html">Strona główna</a> | <a href="znaczniki.html">Znaczniki HTML</a> | <a href="tabele-listy.html">Tabele i listy</a> | <a href="a-img.html">linki i IMG</a> | <a href="css.html">Arkusze CSS</a> | <a href="model-pudelkowy.html">Model pudełkowy</a> | <a href="div-semantyka.html">DIV i HTML5</a> | <a href="pozycjonowanie.html">Pozycjonowanie</a> | <a href="formularze.html">Formularze</a> | <a href="responsywnosc-wcag.html">Responsywność i WCAG</a> | <a href="svg.html">SVG</a> |</nav>
+<main>
+<main>
+
+<section>
+
+<h2>Czym jest menu rozwijane?</h2>
+
+<p>
+Menu rozwijane (Dropdown Menu) to element interfejsu użytkownika,
+który pozwala ukryć dodatkowe opcje nawigacyjne i wyświetlać je dopiero po wykonaniu określonej akcji.
+Najczęściej opcje pojawiają się po najechaniu kursorem myszy lub kliknięciu.
+</p>
+
+<p>
+Dzięki temu można zmniejszyć ilość miejsca zajmowanego przez menu
+oraz uporządkować większą liczbę odnośników.
+</p>
+
+</section>
+
+<section>
+
+<h2>Zastosowanie menu rozwijanego</h2>
+
+<ul>
+
+<li>Nawigacja stron internetowych.</li>
+
+<li>Panele administracyjne.</li>
+
+<li>Sklepy internetowe.</li>
+
+<li>Wielopoziomowe kategorie.</li>
+
+<li>Menu użytkownika po zalogowaniu.</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h2>Podstawowa struktura HTML</h2>
+
+<p>
+Menu rozwijane składa się zwykle z przycisku lub odnośnika
+oraz ukrytej listy elementów.
+</p>
+
+<code>
+<div class="dropdown">
+
+<button>Menu</button>
+
+<div class="dropdown-content">
+
+<a href="#">HTML</a>
+
+<a href="#">CSS</a>
+
+<a href="#">JavaScript</a>
+
+</div>
+
+</div>
+</code>
+
+</section>
+
+<section>
+
+<h2>Ukrywanie elementów</h2>
+
+<p>
+Domyślnie rozwijana część menu jest ukryta za pomocą właściwości display:none.
+</p>
+
+<code>
+.dropdown-content{
+
+    display:none;
+
+}
+</code>
+
+<p>
+Dzięki temu użytkownik widzi jedynie główny przycisk menu.
+</p>
+
+</section>
+
+<section>
+
+<h2>Pseudoklasa :hover</h2>
+
+<p>
+Pseudoklasa :hover aktywuje styl po najechaniu kursorem myszy na element.
+Jest najczęściej wykorzystywana do obsługi prostych menu rozwijanych.
+</p>
+
+<code>
+.dropdown:hover .dropdown-content{
+
+    display:block;
+
+}
+</code>
+
+<p>
+Po najechaniu na element dropdown ukryte opcje zostaną wyświetlone.
+</p>
+
+</section>
+
+<section>
+
+<h2>Pełny przykład HTML</h2>
+
+<code>
+<div class="dropdown">
+
+<button>Kurs HTML</button>
+
+<div class="dropdown-content">
+
+<a href="#">Lekcja 1</a>
+
+<a href="#">Lekcja 2</a>
+
+<a href="#">Lekcja 3</a>
+
+</div>
+
+</div>
+</code>
+
+</section>
+
+<section>
+
+<h2>Pełny przykład CSS</h2>
+
+<code>
+.dropdown{
+
+    position:relative;
+
+    display:inline-block;
+
+}
+
+.dropdown-content{
+
+    display:none;
+
+    position:absolute;
+
+    background:white;
+
+    min-width:200px;
+
+}
+
+.dropdown:hover .dropdown-content{
+
+    display:block;
+
+}
+</code>
+
+</section>
+
+<section>
+
+<h2>Dlaczego używa się position:absolute?</h2>
+
+<p>
+Rozwijana część menu najczęściej posiada pozycjonowanie absolute.
+Pozwala to wyświetlić listę opcji pod przyciskiem
+bez przesuwania pozostałych elementów strony.
+</p>
+
+<code>
+.dropdown-content{
+
+    position:absolute;
+
+}
+</code>
+
+</section>
+
+<section>
+
+<h2>Position: relative w kontenerze</h2>
+
+<p>
+Element nadrzędny często otrzymuje position:relative.
+Dzięki temu rozwijane menu jest pozycjonowane względem swojego kontenera.
+</p>
+
+<code>
+.dropdown{
+
+    position:relative;
+
+}
+</code>
+
+</section>
+
+<section>
+
+<h2>Stylowanie odnośników</h2>
+
+<p>
+Elementy menu można dowolnie stylować za pomocą CSS.
+</p>
+
+<code>
+.dropdown-content a{
+
+    display:block;
+
+    padding:10px;
+
+    text-decoration:none;
+
+}
+</code>
+
+<p>
+Każdy odnośnik będzie wyświetlany w osobnym wierszu.
+</p>
+
+</section>
+
+<section>
+
+<h2>Efekt podświetlenia</h2>
+
+<p>
+Po najechaniu na opcję można zmienić jej kolor tła.
+</p>
+
+<code>
+.dropdown-content a:hover{
+
+    background-color:lightgray;
+
+}
+</code>
+
+</section>
+
+<section>
+
+<h2>Menu wielopoziomowe</h2>
+
+<p>
+Możliwe jest tworzenie menu zawierających kolejne rozwijane podmenu.
+Każdy element może posiadać własną listę opcji.
+</p>
+
+<code>
+HTML
+
+ ├─ Znaczniki
+
+ ├─ Tabele
+
+ └─ Formularze
+</code>
+
+<p>
+Takie rozwiązanie jest często spotykane w dużych serwisach internetowych.
+</p>
+
+</section>
+
+<section>
+
+<h2>Menu rozwijane z listą UL i LI</h2>
+
+<p>
+Bardzo popularnym rozwiązaniem jest budowanie menu przy użyciu list.
+</p>
+
+<code>
+<ul>
+
+<li>HTML
+
+    <ul>
+
+        <li>Znaczniki</li>
+
+        <li>Tabele</li>
+
+    </ul>
+
+</li>
+
+</ul>
+</code>
+
+</section>
+
+<section>
+
+<h2>Zalety menu rozwijanego</h2>
+
+<ul>
+
+<li>Oszczędność miejsca.</li>
+
+<li>Lepsza organizacja nawigacji.</li>
+
+<li>Łatwiejsze zarządzanie dużą liczbą linków.</li>
+
+<li>Czytelniejszy interfejs użytkownika.</li>
+
+<li>Możliwość tworzenia wielopoziomowych menu.</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h2>Wady menu rozwijanego</h2>
+
+<ul>
+
+<li>Zbyt rozbudowane menu może być nieczytelne.</li>
+
+<li>Na urządzeniach mobilnych wymaga dodatkowych rozwiązań.</li>
+
+<li>Niewłaściwe wykonanie może utrudniać dostępność strony.</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h2>Podsumowanie</h2>
+
+<ul>
+
+<li>Menu rozwijane pozwala ukrywać dodatkowe opcje.</li>
+
+<li>Najczęściej wykorzystuje HTML oraz CSS.</li>
+
+<li>Elementy są zwykle ukrywane za pomocą display:none.</li>
+
+<li>Pseudoklasa :hover umożliwia ich wyświetlanie.</li>
+
+<li>Position:absolute pozwala umieszczać menu nad innymi elementami.</li>
+
+<li>Menu może posiadać wiele poziomów.</li>
+
+<li>Jest często wykorzystywane w nowoczesnych witrynach internetowych.</li>
+
+</ul>
+
+</section>
+
+</main>
+</main>
+<footer>Samouczek INF.03</footer>
+</body>
+</html>

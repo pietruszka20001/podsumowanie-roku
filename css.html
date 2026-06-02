@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arkusze CSS</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><h1>Arkusze CSS</h1></header>
+<nav><a href="index.html">Strona główna</a> | <a href="znaczniki.html">Znaczniki HTML</a> | <a href="tabele-listy.html">Tabele i listy</a> | <a href="a-img.html">linki i IMG</a> | <a href="css.html">Arkusze CSS</a> | <a href="model-pudelkowy.html">Model pudełkowy</a> | <a href="div-semantyka.html">DIV i HTML5</a> | <a href="pozycjonowanie.html">Pozycjonowanie</a> | <a href="formularze.html">Formularze</a> | <a href="responsywnosc-wcag.html">Responsywność i WCAG</a>  | <a href="svg.html">SVG</a> |</nav>
+<main>
+<section>
+
+<h2>Czym są arkusze stylów CSS?</h2>
+
+<p>
+CSS (Cascading Style Sheets), czyli kaskadowe arkusze stylów,
+to język służący do opisywania wyglądu elementów strony internetowej.
+HTML odpowiada za strukturę strony, natomiast CSS odpowiada za jej wygląd.
+</p>
+
+<p>
+Za pomocą CSS można zmieniać kolory, czcionki, rozmiary,
+odstępy między elementami, położenie obiektów oraz tworzyć animacje.
+</p>
+
+</section>
+
+<section>
+
+<h2>Jak działa CSS?</h2>
+
+<p>
+CSS składa się z selektora oraz deklaracji stylów.
+Selektor wskazuje element, który ma zostać ostylowany,
+natomiast deklaracje określają jego wygląd.
+</p>
+
+<code>
+p {
+    color: blue;
+    font-size: 20px;
+}
+</code>
+
+<p>
+W powyższym przykładzie wszystkie akapity będą wyświetlane
+kolorem niebieskim i rozmiarem czcionki 20 pikseli.
+</p>
+
+</section>
+
+<section>
+
+<h2>Schemat działania HTML i CSS</h2>
+
+<p>
+Tworzenie strony internetowej opiera się na współpracy HTML i CSS:
+</p>
+
+<ol>
+<li>HTML tworzy strukturę strony.</li>
+<li>CSS nadaje jej wygląd.</li>
+<li>Przeglądarka łączy oba pliki.</li>
+<li>Użytkownik widzi gotową stronę.</li>
+</ol>
+
+</section>
+
+<section>
+
+<h2>Rodzaje arkuszy stylów CSS</h2>
+
+<p>
+Istnieją trzy sposoby dodawania stylów CSS do strony internetowej.
+</p>
+
+</section>
+
+<section>
+
+<h2>1. Styl lokalny (Inline CSS)</h2>
+
+<p>
+Styl lokalny zapisuje się bezpośrednio w znaczniku HTML
+za pomocą atrybutu style.
+</p>
+
+<code>
+&lt;p style="color:red;"&gt;
+Przykładowy tekst
+&lt;/p&gt;
+</code>
+
+<p>
+Zalety:
+</p>
+
+<ul>
+<li>Szybkie zastosowanie pojedynczego stylu.</li>
+</ul>
+
+<p>
+Wady:
+</p>
+
+<ul>
+<li>Trudniejsza edycja większych projektów.</li>
+<li>Powielanie kodu.</li>
+</ul>
+
+</section>
+
+<section>
+
+<h2>2. Styl wewnętrzny (Internal CSS)</h2>
+
+<p>
+Styl zapisuje się w sekcji head dokumentu
+wewnątrz znacznika style.
+</p>
+
+<code>
+&lt;head&gt;
+
+&lt;style&gt;
+
+p{
+    color:red;
+}
+
+&lt;/style&gt;
+
+&lt;/head&gt;
+</code>
+
+<p>
+Zalety:
+</p>
+
+<ul>
+<li>Wszystkie style znajdują się w jednym miejscu.</li>
+</ul>
+
+<p>
+Wady:
+</p>
+
+<ul>
+<li>Działa tylko dla jednej strony.</li>
+</ul>
+
+</section>
+
+<section>
+
+<h2>3. Styl zewnętrzny (External CSS)</h2>
+
+<p>
+Najczęściej stosowany sposób.
+Style znajdują się w osobnym pliku .css.
+</p>
+
+<code>
+&lt;link rel="stylesheet"
+href="style.css"&gt;
+</code>
+
+<p>
+Przykład pliku CSS:
+</p>
+
+<code>
+body{
+    background-color: lightgray;
+}
+
+h1{
+    color: navy;
+}
+</code>
+
+<p>
+Zalety:
+</p>
+
+<ul>
+<li>Jeden plik obsługuje całą witrynę.</li>
+<li>Łatwiejsza aktualizacja.</li>
+<li>Mniejsza ilość kodu HTML.</li>
+</ul>
+
+</section>
+
+<section>
+
+<h2>Selektory CSS</h2>
+
+<p>
+Selektory określają, które elementy mają zostać ostylowane.
+</p>
+
+<table>
+
+<tr>
+<th>Selektor</th>
+<th>Przykład</th>
+<th>Działanie</th>
+</tr>
+
+<tr>
+<td>Elementu</td>
+<td>p</td>
+<td>Wybiera wszystkie akapity.</td>
+</tr>
+
+<tr>
+<td>Klasy</td>
+<td>.menu</td>
+<td>Wybiera elementy z klasą menu.</td>
+</tr>
+
+<tr>
+<td>Identyfikatora</td>
+<td>#logo</td>
+<td>Wybiera element o danym id.</td>
+</tr>
+
+<tr>
+<td>Uniwersalny</td>
+<td>*</td>
+<td>Wybiera wszystkie elementy.</td>
+</tr>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>Klasy i identyfikatory</h2>
+
+<p>
+Klasy można przypisywać wielu elementom.
+Identyfikator powinien występować tylko raz na stronie.
+</p>
+
+<code>
+&lt;p class="opis"&gt;
+Tekst
+&lt;/p&gt;
+
+&lt;h1 id="naglowek"&gt;
+Tytuł
+&lt;/h1&gt;
+</code>
+
+<code>
+.opis{
+    color:green;
+}
+
+#naglowek{
+    color:blue;
+}
+</code>
+
+</section>
+
+<section>
+
+<h2>Dziedziczenie stylów</h2>
+
+<p>
+Niektóre właściwości CSS są dziedziczone przez elementy potomne.
+Przykładem jest kolor tekstu lub rodzaj czcionki.
+</p>
+
+<code>
+body{
+    color:black;
+    font-family:Arial;
+}
+</code>
+
+<p>
+Wszystkie elementy wewnątrz body odziedziczą te ustawienia.
+</p>
+
+</section>
+
+<section>
+
+<h2>Podsumowanie</h2>
+
+<ul>
+
+<li>CSS odpowiada za wygląd strony internetowej.</li>
+
+<li>HTML tworzy strukturę strony.</li>
+
+<li>Istnieją trzy rodzaje arkuszy stylów: lokalne, wewnętrzne i zewnętrzne.</li>
+
+<li>Najczęściej stosuje się zewnętrzne arkusze stylów.</li>
+
+<li>CSS wykorzystuje selektory do wybierania elementów.</li>
+
+<li>Klasy oznacza się kropką, a identyfikatory znakiem #.</li>
+
+</ul>
+
+</section>
+</main>
+<footer>Samouczek INF.03</footer>
+</body>
+</html>

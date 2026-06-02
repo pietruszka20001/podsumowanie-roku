@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Model pudełkowy</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><h1>Model pudełkowy</h1></header>
+<nav><a href="index.html">Strona główna</a> | <a href="znaczniki.html">Znaczniki HTML</a> | <a href="tabele-listy.html">Tabele i listy</a> | <a href="a-img.html">Linki i IMG</a> | <a href="css.html">Arkusze CSS</a> | <a href="model-pudelkowy.html">Model pudełkowy</a> | <a href="div-semantyka.html">DIV i HTML5</a> | <a href="pozycjonowanie.html">Pozycjonowanie</a> | <a href="formularze.html">Formularze</a> | <a href="responsywnosc-wcag.html">Responsywność i WCAG</a> | <a href="svg.html">SVG</a> |</nav>
+<main>
+<section>
+
+<h2>Czym jest model pudełkowy?</h2>
+
+<p>
+Model pudełkowy (Box Model) opisuje sposób, w jaki przeglądarka wyświetla
+i oblicza rozmiary elementów na stronie internetowej.
+Każdy element HTML jest traktowany jak prostokątne pudełko składające się z kilku warstw.
+</p>
+
+</section>
+
+<section>
+
+<h2>Budowa modelu pudełkowego</h2>
+
+<pre>
+
++-----------------------+
+|       MARGIN          |
+|  +-----------------+  |
+|  |     BORDER      |  |
+|  | +-------------+ |  |
+|  | |   PADDING   | |  |
+|  | | +---------+ | |  |
+|  | | |CONTENT  | | |  |
+|  | | +---------+ | |  |
+|  | +-------------+ |  |
+|  +-----------------+  |
++-----------------------+
+
+</pre>
+
+<p>
+Każdy element składa się z:
+</p>
+
+<ul>
+<li><strong>Content</strong> – właściwa zawartość elementu.</li>
+<li><strong>Padding</strong> – odstęp między zawartością a obramowaniem.</li>
+<li><strong>Border</strong> – obramowanie elementu.</li>
+<li><strong>Margin</strong> – zewnętrzny odstęp od innych elementów.</li>
+</ul>
+
+</section>
+
+<section>
+
+<h2>Content</h2>
+
+<p>
+Content to obszar zawierający tekst, obraz lub inne elementy znajdujące się wewnątrz znacznika.
+Jego rozmiar można określać za pomocą właściwości width i height.
+</p>
+
+<code>
+div{
+    width:300px;
+    height:150px;
+}
+</code>
+
+</section>
+
+<section>
+
+<h2>Padding</h2>
+
+<p>
+Padding określa odstęp pomiędzy zawartością elementu a jego obramowaniem.
+Powoduje zwiększenie przestrzeni wewnątrz elementu.
+</p>
+
+<code>
+div{
+    padding:20px;
+}
+</code>
+
+<p>
+Można również ustawiać padding dla poszczególnych stron:
+</p>
+
+<code>
+padding-top:20px;
+padding-right:20px;
+padding-bottom:20px;
+padding-left:20px;
+</code>
+
+</section>
+
+<section>
+
+<h2>Border</h2>
+
+<p>
+Border tworzy obramowanie wokół elementu.
+Można określić jego grubość, styl oraz kolor.
+</p>
+
+<code>
+div{
+    border:3px solid black;
+}
+</code>
+
+<table>
+
+<tr>
+<th>Styl</th>
+<th>Opis</th>
+</tr>
+
+<tr>
+<td>solid</td>
+<td>Linia ciągła</td>
+</tr>
+
+<tr>
+<td>dashed</td>
+<td>Linia kreskowana</td>
+</tr>
+
+<tr>
+<td>dotted</td>
+<td>Linia kropkowana</td>
+</tr>
+
+<tr>
+<td>double</td>
+<td>Linia podwójna</td>
+</tr>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>Margin</h2>
+
+<p>
+Margin określa zewnętrzny odstęp pomiędzy elementami.
+Nie wpływa na zawartość elementu.
+</p>
+
+<code>
+div{
+    margin:30px;
+}
+</code>
+
+<p>
+Możliwe jest również ustawianie marginesów dla poszczególnych stron:
+</p>
+
+<code>
+margin-top:20px;
+margin-right:20px;
+margin-bottom:20px;
+margin-left:20px;
+</code>
+
+</section>
+
+<section>
+
+<h2>Przykład modelu pudełkowego</h2>
+
+<code>
+div{
+
+    width:300px;
+
+    padding:20px;
+
+    border:2px solid blue;
+
+    margin:30px;
+
+}
+</code>
+
+<p>
+Szerokość całkowita elementu będzie większa niż 300px,
+ponieważ zostaną doliczone paddingi i obramowanie.
+</p>
+
+</section>
+
+<section>
+
+<h2>Box-sizing</h2>
+
+<p>
+Domyślnie przeglądarka dodaje padding i border do szerokości elementu.
+Właściwość box-sizing pozwala zmienić ten sposób obliczania rozmiaru.
+</p>
+
+<code>
+box-sizing:border-box;
+</code>
+
+<p>
+Dzięki temu szerokość elementu uwzględnia padding oraz border.
+Jest to najczęściej stosowane rozwiązanie w nowoczesnych projektach.
+</p>
+
+</section>
+
+<section>
+
+<h2>Przykład praktyczny</h2>
+
+<code>
+.box{
+
+    width:250px;
+
+    padding:20px;
+
+    border:3px solid red;
+
+    margin:20px;
+
+    background-color:lightgray;
+
+}
+</code>
+
+<p>
+Powyższy kod tworzy element o szerokości 250 pikseli,
+z szarym tłem, czerwonym obramowaniem i odstępami.
+</p>
+
+</section>
+
+<section>
+
+<h2>Znaczenie modelu pudełkowego</h2>
+
+<p>
+Znajomość modelu pudełkowego jest bardzo ważna podczas projektowania układu strony.
+Pozwala poprawnie rozmieszczać elementy, kontrolować odstępy
+oraz unikać problemów z szerokością i wysokością obiektów.
+</p>
+
+</section>
+
+<section>
+
+<h2>Podsumowanie</h2>
+
+<ul>
+
+<li>Każdy element HTML jest traktowany jak pudełko.</li>
+
+<li>Model pudełkowy składa się z Content, Padding, Border i Margin.</li>
+
+<li>Padding tworzy odstęp wewnątrz elementu.</li>
+
+<li>Border odpowiada za obramowanie.</li>
+
+<li>Margin tworzy odstęp na zewnątrz elementu.</li>
+
+<li>Box-sizing pozwala kontrolować sposób obliczania rozmiarów elementów.</li>
+
+</ul>
+
+</section>
+</main>
+<footer>Samouczek INF.03</footer>
+</body>
+</html>

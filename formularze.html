@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formularze</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><h1>Formularze</h1></header>
+<nav><a href="index.html">Strona główna</a> | <a href="znaczniki.html">Znaczniki HTML</a> | <a href="tabele-listy.html">Tabele i listy</a> | <a href="a-img.html">linki i IMG</a> | <a href="css.html">Arkusze CSS</a> | <a href="model-pudelkowy.html">Model pudełkowy</a> | <a href="div-semantyka.html">DIV i HTML5</a> | <a href="pozycjonowanie.html">Pozycjonowanie</a> | <a href="formularze.html">Formularze</a> | <a href="responsywnosc-wcag.html">Responsywność i WCAG</a> | <a href="svg.html">SVG</a> |</nav>
+<main>
+
+<section>
+
+<h2>Czym są formularze?</h2>
+
+<p>
+Formularze HTML służą do wprowadzania i przesyłania danych przez użytkownika.
+Wykorzystywane są między innymi podczas logowania, rejestracji,
+wysyłania wiadomości, składania zamówień czy wyszukiwania informacji.
+</p>
+
+<p>
+Podstawowym znacznikiem formularza jest element FORM.
+W jego wnętrzu umieszcza się pola do wprowadzania danych oraz przyciski.
+</p>
+
+<code>
+<form>
+
+</form>
+</code>
+
+</section>
+
+<section>
+
+<h2>Znacznik FORM</h2>
+
+<p>
+Element FORM tworzy formularz i określa sposób przesyłania danych.
+Najczęściej wykorzystuje atrybuty action oraz method.
+</p>
+
+<code>
+<form action="zapisz.php" method="post">
+
+</form>
+</code>
+
+<ul>
+
+<li><strong>action</strong> – adres, do którego zostaną wysłane dane.</li>
+
+<li><strong>method</strong> – sposób przesyłania danych.</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h2>Metody GET i POST</h2>
+
+<p>
+Atrybut method określa sposób przesyłania danych formularza.
+</p>
+
+<table>
+
+<tr>
+<th>Metoda</th>
+<th>Opis</th>
+</tr>
+
+<tr>
+<td>GET</td>
+<td>Dane są widoczne w adresie URL.</td>
+</tr>
+
+<tr>
+<td>POST</td>
+<td>Dane przesyłane są w treści żądania.</td>
+</tr>
+
+</table>
+
+<code>
+<form method="get">
+
+<form method="post">
+</code>
+
+</section>
+
+<section>
+
+<h2>Znacznik INPUT</h2>
+
+<p>
+INPUT jest najczęściej używanym elementem formularzy.
+Pozwala użytkownikowi wprowadzać różnego rodzaju dane.
+</p>
+
+<code>
+<input type="text">
+</code>
+
+<p>
+Rodzaj pola określany jest przez atrybut type.
+</p>
+
+</section>
+
+<section>
+
+<h2>Najpopularniejsze typy INPUT</h2>
+
+<table>
+
+<tr>
+<th>Typ</th>
+<th>Zastosowanie</th>
+</tr>
+
+<tr>
+<td>text</td>
+<td>Zwykły tekst</td>
+</tr>
+
+<tr>
+<td>password</td>
+<td>Hasło</td>
+</tr>
+
+<tr>
+<td>email</td>
+<td>Adres e-mail</td>
+</tr>
+
+<tr>
+<td>number</td>
+<td>Liczby</td>
+</tr>
+
+<tr>
+<td>date</td>
+<td>Data</td>
+</tr>
+
+<tr>
+<td>tel</td>
+<td>Numer telefonu</td>
+</tr>
+
+<tr>
+<td>file</td>
+<td>Wybór pliku</td>
+</tr>
+
+<tr>
+<td>checkbox</td>
+<td>Pole wyboru</td>
+</tr>
+
+<tr>
+<td>radio</td>
+<td>Przycisk opcji</td>
+</tr>
+
+<tr>
+<td>range</td>
+<td>Suwak</td>
+</tr>
+
+<tr>
+<td>color</td>
+<td>Wybór koloru</td>
+</tr>
+
+<tr>
+<td>submit</td>
+<td>Wysłanie formularza</td>
+</tr>
+
+<tr>
+<td>reset</td>
+<td>Wyczyszczenie formularza</td>
+</tr>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>Przykłady pól INPUT</h2>
+
+<code>
+<input type="text">
+
+<input type="password">
+
+<input type="email">
+
+<input type="date">
+
+<input type="number">
+</code>
+
+</section>
+
+<section>
+
+<h2>Checkbox i Radio</h2>
+
+<p>
+Checkbox pozwala zaznaczyć wiele opcji jednocześnie,
+natomiast radio umożliwia wybór tylko jednej opcji z grupy.
+</p>
+
+<code>
+<input type="checkbox">
+
+<input type="radio" name="plec">
+
+<input type="radio" name="plec">
+</code>
+
+</section>
+
+<section>
+
+<h2>Przycisk BUTTON</h2>
+
+<p>
+BUTTON tworzy przycisk wykonywający określoną akcję.
+</p>
+
+<code>
+<button>Wyślij</button>
+</code>
+
+<p>
+Może służyć do wysyłania formularza lub wykonywania skryptów JavaScript.
+</p>
+
+</section>
+
+<section>
+
+<h2>SELECT i OPTION</h2>
+
+<p>
+SELECT tworzy listę rozwijaną.
+Poszczególne pozycje definiowane są za pomocą OPTION.
+</p>
+
+<code>
+<select>
+
+<option>HTML</option>
+
+<option>CSS</option>
+
+<option>JavaScript</option>
+
+</select>
+</code>
+
+</section>
+
+<section>
+
+<h2>TEXTAREA</h2>
+
+<p>
+TEXTAREA umożliwia wpisywanie większej ilości tekstu,
+np. treści wiadomości lub komentarza.
+</p>
+
+<code>
+<textarea rows="5" cols="30">
+
+</textarea>
+</code>
+
+</section>
+
+<section>
+
+<h2>FIELDSET i LEGEND</h2>
+
+<p>
+FIELDSET służy do grupowania pól formularza,
+natomiast LEGEND nadaje nazwę grupie.
+</p>
+
+<code>
+<fieldset>
+
+<legend>Dane osobowe</legend>
+
+<input type="text">
+
+</fieldset>
+</code>
+
+</section>
+
+<section>
+
+<h2>Walidacja formularzy</h2>
+
+<p>
+HTML pozwala automatycznie sprawdzać poprawność danych.
+Służą do tego odpowiednie atrybuty.
+</p>
+
+<table>
+
+<tr>
+<th>Atrybut</th>
+<th>Działanie</th>
+</tr>
+
+<tr>
+<td>required</td>
+<td>Pole obowiązkowe</td>
+</tr>
+
+<tr>
+<td>minlength</td>
+<td>Minimalna liczba znaków</td>
+</tr>
+
+<tr>
+<td>maxlength</td>
+<td>Maksymalna liczba znaków</td>
+</tr>
+
+<tr>
+<td>min</td>
+<td>Minimalna wartość</td>
+</tr>
+
+<tr>
+<td>max</td>
+<td>Maksymalna wartość</td>
+</tr>
+
+<tr>
+<td>pattern</td>
+<td>Wyrażenie regularne</td>
+</tr>
+
+</table>
+
+</section>
+
+
+<section>
+
+<h2>Przykład kompletnego formularza</h2>
+
+<code>
+<form method="post">
+
+<label>Imię:</label>
+
+<input type="text" required>
+
+<label>Email:</label>
+
+<input type="email" required>
+
+<label>Wiadomość:</label>
+
+<textarea></textarea>
+
+<button type="submit">
+Wyślij
+</button>
+
+</form>
+</code>
+
+</section>
+
+<section>
+
+<h2>Podsumowanie</h2>
+
+<ul>
+
+<li>FORM służy do tworzenia formularzy.</li>
+
+<li>INPUT umożliwia wprowadzanie danych.</li>
+
+<li>Typ pola określa atrybut type.</li>
+
+<li>GET i POST określają sposób przesyłania danych.</li>
+
+<li>SELECT tworzy listę rozwijaną.</li>
+
+<li>TEXTAREA służy do wpisywania dłuższego tekstu.</li>
+
+<li>FIELDSET grupuje pola formularza.</li>
+
+<li>LEGEND nadaje nazwę grupie pól.</li>
+
+<li>Walidacja pozwala sprawdzać poprawność danych.</li>
+
+</ul>
+
+</section>
+
+</main>
+
+<footer>Samouczek INF.03</footer>
+</body>
+</html>

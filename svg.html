@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SVG</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><h1>SVG</h1></header>
+<nav><a href="index.html">Strona główna</a> | <a href="znaczniki.html">Znaczniki HTML</a> | <a href="tabele-listy.html">Tabele i listy</a> | <a href="a-img.html">linki i IMG</a> | <a href="css.html">Arkusze CSS</a> | <a href="model-pudelkowy.html">Model pudełkowy</a> | <a href="div-semantyka.html">DIV i HTML5</a> | <a href="pozycjonowanie.html">Pozycjonowanie</a> | <a href="formularze.html">Formularze</a> | <a href="responsywnosc-wcag.html">Responsywność i WCAG</a> | <a href="svg.html">SVG</a> |</nav>
+<main>
+<main>
+
+<section>
+
+<h2>Czym jest SVG?</h2>
+
+<p>
+SVG (Scalable Vector Graphics) to format grafiki wektorowej oparty na języku XML.
+W przeciwieństwie do obrazów rastrowych (JPG, PNG, GIF),
+grafika SVG nie traci jakości podczas powiększania.
+</p>
+
+<p>
+Elementy SVG są tworzone za pomocą kodu HTML/XML,
+dzięki czemu można je łatwo modyfikować za pomocą CSS i JavaScript.
+</p>
+
+</section>
+
+<section>
+
+<h2>Zalety SVG</h2>
+
+<ul>
+
+<li>Brak utraty jakości podczas skalowania.</li>
+
+<li>Niewielki rozmiar plików.</li>
+
+<li>Możliwość animowania elementów.</li>
+
+<li>Łatwa edycja w kodzie.</li>
+
+<li>Obsługa przez wszystkie nowoczesne przeglądarki.</li>
+
+<li>Idealne do ikon, wykresów i logo.</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h2>Podstawowy znacznik SVG</h2>
+
+<p>
+Każdy rysunek SVG rozpoczyna się od znacznika SVG,
+który określa obszar roboczy grafiki.
+</p>
+
+<code>
+<svg width="300" height="200">
+
+</svg>
+</code>
+
+<p>
+Atrybuty width i height określają szerokość oraz wysokość obszaru rysowania.
+</p>
+
+</section>
+
+<section>
+
+<h2>Znacznik RECT</h2>
+
+<p>
+RECT służy do rysowania prostokątów.
+</p>
+
+<code>
+<svg width="250" height="120">
+
+<rect
+x="20"
+y="20"
+width="150"
+height="80"
+fill="blue" />
+
+</svg>
+</code>
+
+<p>
+Powstanie niebieski prostokąt o szerokości 150 pikseli i wysokości 80 pikseli.
+</p>
+
+</section>
+
+<section>
+
+<h2>Znacznik CIRCLE</h2>
+
+<p>
+CIRCLE rysuje okrąg.
+</p>
+
+<code>
+<svg width="200" height="200">
+
+<circle
+cx="100"
+cy="100"
+r="50"
+fill="red" />
+
+</svg>
+</code>
+
+<table>
+
+<tr>
+<th>Atrybut</th>
+<th>Znaczenie</th>
+</tr>
+
+<tr>
+<td>cx</td>
+<td>Położenie środka na osi X</td>
+</tr>
+
+<tr>
+<td>cy</td>
+<td>Położenie środka na osi Y</td>
+</tr>
+
+<tr>
+<td>r</td>
+<td>Promień okręgu</td>
+</tr>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>Znacznik ELLIPSE</h2>
+
+<p>
+ELLIPSE tworzy elipsę.
+</p>
+
+<code>
+<svg width="250" height="150">
+
+<ellipse
+cx="120"
+cy="70"
+rx="90"
+ry="40"
+fill="green" />
+
+</svg>
+</code>
+
+<p>
+W przeciwieństwie do okręgu można ustawić różne promienie poziome i pionowe.
+</p>
+
+</section>
+
+<section>
+
+<h2>Znacznik LINE</h2>
+
+<p>
+LINE służy do rysowania linii.
+</p>
+
+<code>
+<svg width="300" height="150">
+
+<line
+x1="20"
+y1="20"
+x2="250"
+y2="100"
+stroke="black"
+stroke-width="3" />
+
+</svg>
+</code>
+
+</section>
+
+
+<section>
+
+<h2>Znacznik POLYGON</h2>
+
+<p>
+POLYGON działa podobnie jak POLYLINE,
+ale automatycznie zamyka figurę.
+</p>
+
+<code>
+<svg width="200" height="200">
+
+<polygon
+points="100,20 180,180 20,180"
+fill="orange" />
+
+</svg>
+</code>
+
+<p>
+Powyższy kod utworzy trójkąt.
+</p>
+
+</section>
+
+<section>
+
+<h2>Znacznik TEXT</h2>
+
+<p>
+TEXT umożliwia umieszczanie tekstu wewnątrz grafiki SVG.
+</p>
+
+<code>
+<svg width="300" height="100">
+
+<text
+x="20"
+y="50">
+
+Witaj SVG
+
+</text>
+
+</svg>
+</code>
+
+</section>
+
+<section>
+
+<h2>Kolory w SVG</h2>
+
+<p>
+Kolor wypełnienia określa atrybut fill,
+natomiast kolor obramowania stroke.
+</p>
+
+<code>
+<circle
+cx="80"
+cy="80"
+r="50"
+fill="yellow"
+stroke="black"
+stroke-width="3" />
+</code>
+
+</section>
+
+<section>
+
+<h2>Przezroczystość</h2>
+
+<p>
+Przezroczystość elementów można ustawiać za pomocą atrybutu opacity.
+</p>
+
+<code>
+<rect
+width="150"
+height="80"
+fill="red"
+opacity="0.5" />
+</code>
+
+</section>
+
+
+<section>
+
+<h2>Przykład kompletnej grafiki SVG</h2>
+
+<code>
+<svg width="300" height="200">
+
+<rect
+x="20"
+y="20"
+width="260"
+height="160"
+fill="lightblue" />
+
+<circle
+cx="150"
+cy="100"
+r="50"
+fill="yellow" />
+
+<text
+x="110"
+y="105">
+
+SVG
+
+</text>
+
+</svg>
+</code>
+
+<p>
+Przykład przedstawia prostokąt, okrąg oraz napis umieszczone w jednej grafice SVG.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>Podsumowanie</h2>
+
+<ul>
+
+<li>SVG jest grafiką wektorową opartą na XML.</li>
+
+<li>Nie traci jakości podczas powiększania.</li>
+
+<li>Najważniejszym znacznikiem jest SVG.</li>
+
+<li>RECT tworzy prostokąty.</li>
+
+<li>CIRCLE tworzy okręgi.</li>
+
+<li>ELLIPSE tworzy elipsy.</li>
+
+<li>LINE rysuje linie.</li>
+
+<li>POLYGON tworzy zamknięte figury.</li>
+
+<li>TEXT pozwala umieszczać napisy.</li>
+
+</ul>
+
+</section>
+
+</main>
+</main>
+<footer>Samouczek INF.03</footer>
+</body>
+</html>

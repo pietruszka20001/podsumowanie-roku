@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsywność i WCAG</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><h1>Responsywność i WCAG</h1></header>
+<nav><a href="index.html">Strona główna</a> | <a href="znaczniki.html">Znaczniki HTML</a> | <a href="tabele-listy.html">Tabele i listy</a> | <a href="a-img.html">linki i IMG</a> | <a href="css.html">Arkusze CSS</a> | <a href="model-pudelkowy.html">Model pudełkowy</a> | <a href="div-semantyka.html">DIV i HTML5</a> | <a href="pozycjonowanie.html">Pozycjonowanie</a> | <a href="formularze.html">Formularze</a> | <a href="responsywnosc-wcag.html">Responsywność i WCAG</a> | <a href="svg.html">SVG</a> |</nav>
+<main>
+<main>
+
+<section>
+
+<h2>Czym jest responsywność?</h2>
+
+<p>
+Responsywność (Responsive Web Design – RWD) to technika projektowania stron internetowych,
+która pozwala automatycznie dostosowywać wygląd witryny do różnych urządzeń i rozdzielczości ekranów.
+</p>
+
+<p>
+Dzięki responsywności ta sama strona może poprawnie działać na komputerach,
+tabletach oraz smartfonach bez konieczności tworzenia oddzielnych wersji witryny.
+</p>
+
+</section>
+
+<section>
+
+<h2>Dlaczego responsywność jest ważna?</h2>
+
+<p>
+Coraz więcej użytkowników korzysta z Internetu na urządzeniach mobilnych.
+Strona niedostosowana do małych ekranów może być trudna w obsłudze
+i powodować problemy z odczytywaniem treści.
+</p>
+
+<ul>
+
+<li>Lepsze doświadczenie użytkownika.</li>
+
+<li>Poprawne wyświetlanie na różnych urządzeniach.</li>
+
+<li>Łatwiejsza nawigacja.</li>
+
+<li>Lepsze wyniki w wyszukiwarkach.</li>
+
+<li>Brak konieczności tworzenia osobnej wersji mobilnej.</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h2>Meta Viewport</h2>
+
+<p>
+Podstawowym elementem każdej responsywnej strony jest znacznik viewport.
+Informuje on przeglądarkę, że szerokość strony ma być dostosowana do szerokości urządzenia.
+</p>
+
+<code>
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+</code>
+
+<p>
+Bez tego znacznika strona może być nieprawidłowo skalowana na urządzeniach mobilnych.
+</p>
+
+</section>
+
+<section>
+
+<h2>Elastyczne jednostki</h2>
+
+<p>
+W projektowaniu responsywnym często stosuje się jednostki względne zamiast stałych pikseli.
+Pozwalają one dostosowywać rozmiary elementów do różnych ekranów.
+</p>
+
+<table>
+
+<tr>
+<th>Jednostka</th>
+<th>Opis</th>
+</tr>
+
+<tr>
+<td>%</td>
+<td>Procent szerokości lub wysokości rodzica</td>
+</tr>
+
+<tr>
+<td>em</td>
+<td>Względem rozmiaru czcionki rodzica</td>
+</tr>
+
+<tr>
+<td>rem</td>
+<td>Względem głównej czcionki strony</td>
+</tr>
+
+<tr>
+<td>vw</td>
+<td>Procent szerokości okna przeglądarki</td>
+</tr>
+
+<tr>
+<td>vh</td>
+<td>Procent wysokości okna przeglądarki</td>
+</tr>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>Elastyczne obrazy</h2>
+
+<p>
+Obrazy powinny automatycznie zmieniać rozmiar wraz ze zmianą szerokości ekranu.
+</p>
+
+<code>
+img{
+
+    max-width:100%;
+
+    height:auto;
+
+}
+</code>
+
+<p>
+Dzięki temu obraz nie będzie wychodził poza obszar strony.
+</p>
+
+</section>
+
+<section>
+
+<h2>Media Queries</h2>
+
+<p>
+Media Queries umożliwiają stosowanie różnych stylów CSS
+w zależności od rozmiaru ekranu urządzenia.
+</p>
+
+<code>
+@media (max-width:768px){
+
+    body{
+
+        font-size:14px;
+
+    }
+
+}
+</code>
+
+<p>
+Powyższy przykład zmniejsza rozmiar tekstu na urządzeniach o szerokości do 768 pikseli.
+</p>
+
+</section>
+
+<section>
+
+<h2>Najczęściej używane progi szerokości</h2>
+
+<table>
+
+<tr>
+<th>Urządzenie</th>
+<th>Szerokość</th>
+</tr>
+
+<tr>
+<td>Smartfon</td>
+<td>do 768px</td>
+</tr>
+
+<tr>
+<td>Tablet</td>
+<td>769px - 1024px</td>
+</tr>
+
+<tr>
+<td>Laptop</td>
+<td>1025px - 1440px</td>
+</tr>
+
+<tr>
+<td>Duży monitor</td>
+<td>powyżej 1440px</td>
+</tr>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>Flexbox a responsywność</h2>
+
+<p>
+Flexbox jest jednym z najpopularniejszych narzędzi wykorzystywanych
+do budowania responsywnych układów stron.
+</p>
+
+<code>
+.container{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+}
+</code>
+
+<p>
+Elementy mogą automatycznie przenosić się do kolejnych wierszy
+w zależności od dostępnego miejsca.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>Czym jest WCAG?</h2>
+
+<p>
+WCAG (Web Content Accessibility Guidelines)
+to międzynarodowy zbiór wytycznych dotyczących dostępności stron internetowych.
+</p>
+
+<p>
+Ich celem jest umożliwienie korzystania z Internetu osobom
+z różnymi niepełnosprawnościami.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>Cztery główne zasady WCAG</h2>
+
+<ul>
+
+<li><strong>Postrzegalność</strong> – użytkownik musi móc odbierać treść.</li>
+
+<li><strong>Funkcjonalność</strong> – elementy muszą być możliwe do obsługi.</li>
+
+<li><strong>Zrozumiałość</strong> – treści powinny być czytelne i przewidywalne.</li>
+
+<li><strong>Solidność</strong> – strona powinna działać w różnych przeglądarkach i technologiach wspomagających.</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h2>Przykłady zasad WCAG</h2>
+
+<ul>
+
+<li>Dodawanie tekstów alternatywnych do obrazów.</li>
+
+<li>Odpowiedni kontrast między tekstem a tłem.</li>
+
+<li>Możliwość obsługi strony za pomocą klawiatury.</li>
+
+<li>Poprawne używanie nagłówków H1-H6.</li>
+
+<li>Opisane formularze za pomocą etykiet LABEL.</li>
+
+<li>Unikanie migających elementów.</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h2>Przykład tekstu alternatywnego</h2>
+
+<code>
+<img src="logo.png"
+alt="Logo firmy">
+</code>
+
+<p>
+Atrybut ALT jest odczytywany przez czytniki ekranowe
+i wyświetlany w przypadku problemów z załadowaniem obrazu.
+</p>
+
+</section>
+
+<section>
+
+<h2>Znaczenie responsywności i WCAG</h2>
+
+<p>
+Nowoczesna strona internetowa powinna być jednocześnie responsywna i dostępna.
+Responsywność poprawia korzystanie z witryny na różnych urządzeniach,
+natomiast WCAG zapewnia dostępność dla wszystkich użytkowników.
+</p>
+
+</section>
+
+<section>
+
+<h2>Podsumowanie</h2>
+
+<ul>
+
+<li>Responsywność pozwala dostosować stronę do różnych ekranów.</li>
+
+<li>Znacznik viewport jest podstawą RWD.</li>
+
+<li>Media Queries umożliwiają tworzenie różnych stylów dla różnych urządzeń.</li>
+
+<li>Flexbox pomagaja budować elastyczne układy.</li>
+
+<li>WCAG określa zasady dostępności stron internetowych.</li>
+
+
+<li>Dostępność poprawia komfort korzystania ze strony.</li>
+
+<li>Nowoczesna witryna powinna spełniać zasady RWD i WCAG.</li>
+
+</ul>
+
+</section>
+
+</main>
+</main>
+<footer>Samouczek INF.03</footer>
+</body>
+</html>

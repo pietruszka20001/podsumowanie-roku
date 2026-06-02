@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Znaczniki Linki i IMG</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><h1>Znaczniki Linki i IMG</h1></header>
+<nav><a href="index.html">Strona główna</a> | <a href="znaczniki.html">Znaczniki HTML</a> | <a href="tabele-listy.html">Tabele i listy</a> | <a href="a-img.html">Znaczniki A i IMG</a> | <a href="css.html">Arkusze CSS</a> | <a href="model-pudelkowy.html">Model pudełkowy</a> | <a href="div-semantyka.html">DIV i HTML5</a> | <a href="pozycjonowanie.html">Pozycjonowanie</a> | <a href="formularze.html">Formularze</a> | <a href="responsywnosc-wcag.html">Responsywność i WCAG</a> | <a href="svg.html">SVG</a> |</nav>
+<main>
+<section>
+
+<h2>Znacznik a - tworzenie odnośników</h2>
+
+<p>
+Znacznik <strong>a</strong> (anchor) służy do tworzenia hiperłączy.
+Dzięki niemu użytkownik może przejść do innej strony, pliku lub konkretnego miejsca na stronie.
+</p>
+
+<code>
+&lt;a href="https://www.google.pl"&gt;
+Google
+&lt;/a&gt;
+</code>
+
+<p>
+Efekt:
+</p>
+
+<a href="https://www.google.pl" target="_blank">Google</a>
+
+</section>
+
+<section>
+
+<h2>Najważniejsze atrybuty znacznika a</h2>
+
+<table>
+
+<tr>
+<th>Atrybut</th>
+<th>Opis</th>
+</tr>
+
+<tr>
+<td>href</td>
+<td>Adres strony lub pliku</td>
+</tr>
+
+<tr>
+<td>target</td>
+<td>Określa gdzie otworzyć link</td>
+</tr>
+
+<tr>
+<td>title</td>
+<td>Dodatkowy opis odnośnika</td>
+</tr>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>Przykład odnośnika otwieranego w nowej karcie</h2>
+
+<code>
+&lt;a href="https://www.wp.pl"
+target="_blank"&gt;
+Wirtualna Polska
+&lt;/a&gt;
+</code>
+
+<p>
+Atrybut <strong>target="_blank"</strong> powoduje otwarcie strony w nowej karcie przeglądarki.
+</p>
+
+</section>
+
+<section>
+
+<h2>Odnośnik do podstrony</h2>
+
+<p>
+Link może prowadzić również do innego pliku w obrębie witryny.
+</p>
+
+<code>
+&lt;a href="formularze.html"&gt;
+Formularze
+&lt;/a&gt;
+</code>
+
+</section>
+
+<section>
+
+<h2>Znacznik IMG - obrazy</h2>
+
+<p>
+Znacznik <strong>img</strong> służy do wyświetlania obrazów na stronie internetowej.
+Jest znacznikiem nieparzystym.
+</p>
+
+<code>
+&lt;img src="obraz.jpg" alt="Przykładowy obraz"&gt;
+</code>
+
+</section>
+
+<section>
+
+<h2>Najważniejsze atrybuty IMG</h2>
+
+<table>
+
+<tr>
+<th>Atrybut</th>
+<th>Opis</th>
+</tr>
+
+<tr>
+<td>src</td>
+<td>Ścieżka do pliku graficznego</td>
+</tr>
+
+<tr>
+<td>alt</td>
+<td>Tekst alternatywny</td>
+</tr>
+
+<tr>
+<td>width</td>
+<td>Szerokość obrazu</td>
+</tr>
+
+<tr>
+<td>height</td>
+<td>Wysokość obrazu</td>
+</tr>
+
+<tr>
+<td>title</td>
+<td>Dodatkowy opis obrazu</td>
+</tr>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>Znaczenie atrybutu ALT</h2>
+
+<p>
+Atrybut <strong>alt</strong> wyświetla opis obrazu,
+gdy grafika nie może zostać załadowana.
+Jest również ważny dla osób korzystających z czytników ekranowych
+oraz zgodności z WCAG.
+</p>
+
+<code>
+&lt;img src="logo.png"
+alt="Logo szkoły"&gt;
+</code>
+
+</section>
+
+<section>
+
+<h2>Przykład obrazu</h2>
+
+<code>
+&lt;img src="https://picsum.photos/400/200"
+alt="Przykładowy obraz"
+width="400"&gt;
+</code>
+
+<img src="https://libraryofruina.wiki.gg/images/thumb/LOR_logo_text.png/550px-LOR_logo_text.png?86a3b0"
+width="400" height="200"
+alt="Przykładowy obraz">
+
+</section>
+
+<section>
+
+<h2>Obraz jako odnośnik</h2>
+
+<p>
+Znacznik IMG można umieścić wewnątrz znacznika A.
+Po kliknięciu obraz działa wtedy jak link.
+</p>
+
+<code>
+&lt;a href="https://www.google.pl"&gt;
+
+    &lt;img src="logo.png"
+    alt="Logo"&gt;
+
+&lt;/a&gt;
+</code>
+
+</section>
+
+<section>
+
+<h2>Podsumowanie</h2>
+
+<ul>
+
+<li>Znacznik a tworzy hiperłącza.</li>
+
+<li>Atrybut href określa adres odnośnika.</li>
+
+<li>Target="_blank" otwiera stronę w nowej karcie.</li>
+
+<li>Znacznik IMG służy do wyświetlania obrazów.</li>
+
+<li>Src określa lokalizację pliku.</li>
+
+<li>Alt jest tekstem alternatywnym wymaganym przez WCAG.</li>
+
+<li>Obrazy mogą pełnić rolę odnośników.</li>
+
+</ul>
+
+</section>
+</main>
+<footer>Samouczek INF.03</footer>
+</body>
+</html>

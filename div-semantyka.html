@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DIV i HTML5</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><h1>DIV i HTML5</h1></header>
+<nav><a href="index.html">Strona główna</a> | <a href="znaczniki.html">Znaczniki HTML</a> | <a href="tabele-listy.html">Tabele i listy</a> | <a href="a-img.html">linki i IMG</a> | <a href="css.html">Arkusze CSS</a> | <a href="model-pudelkowy.html">Model pudełkowy</a> | <a href="div-semantyka.html">DIV i HTML5</a> | <a href="pozycjonowanie.html">Pozycjonowanie</a> | <a href="formularze.html">Formularze</a> | <a href="responsywnosc-wcag.html">Responsywność i WCAG</a> | <a href="svg.html">SVG</a> |</nav>
+<main>
+<main>
+
+<section>
+
+<h2>Czym jest DIV?</h2>
+
+<p>
+Znacznik DIV (Division) jest jednym z najczęściej używanych elementów HTML.
+Służy do grupowania innych elementów strony internetowej w logiczne bloki.
+Sam znacznik nie posiada żadnego znaczenia semantycznego i pełni rolę uniwersalnego kontenera.
+Najczęściej wykorzystywany jest podczas tworzenia układu strony oraz stylowania elementów za pomocą CSS.
+</p>
+
+<code>
+<div>
+    Zawartość elementu
+</div>
+</code>
+
+</section>
+
+<section>
+
+<h2>Dlaczego używa się DIV?</h2>
+
+<p>
+DIV pozwala organizować kod strony w większe sekcje i łatwiej zarządzać ich wyglądem.
+Dzięki niemu można grupować nagłówki, akapity, obrazy, formularze oraz inne elementy.
+</p>
+
+<ul>
+
+<li>Tworzenie układu strony.</li>
+
+<li>Grupowanie elementów.</li>
+
+<li>Nadawanie wspólnych stylów CSS.</li>
+
+<li>Łatwiejsze zarządzanie kodem.</li>
+
+<li>Tworzenie kontenerów dla JavaScript.</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h2>Przykład użycia DIV</h2>
+
+<p>
+Poniższy przykład przedstawia prosty kontener zawierający nagłówek i akapit.
+</p>
+
+<code>
+<div class="box">
+
+<h3>Tytuł sekcji</h3>
+
+<p>Przykładowa treść.</p>
+
+</div>
+</code>
+
+<p>
+Do elementu można przypisać klasę lub identyfikator,
+a następnie stylować go w arkuszu CSS.
+</p>
+
+</section>
+
+<section>
+
+<h2>DIV a elementy semantyczne</h2>
+
+<p>
+W starszych wersjach HTML większość układu strony budowano wyłącznie przy użyciu DIV.
+HTML5 wprowadził jednak elementy semantyczne, które opisują przeznaczenie konkretnej części strony.
+Dzięki temu kod jest bardziej czytelny dla programistów, wyszukiwarek i czytników ekranowych.
+</p>
+
+</section>
+
+<section>
+
+<h2>Najważniejsze elementy semantyczne HTML5</h2>
+
+<table>
+
+<tr>
+<th>Znacznik</th>
+<th>Przeznaczenie</th>
+</tr>
+
+<tr>
+<td>header</td>
+<td>Nagłówek strony lub sekcji</td>
+</tr>
+
+<tr>
+<td>nav</td>
+<td>Menu nawigacyjne</td>
+</tr>
+
+<tr>
+<td>main</td>
+<td>Główna zawartość strony</td>
+</tr>
+
+<tr>
+<td>section</td>
+<td>Wydzielona sekcja tematyczna</td>
+</tr>
+
+<tr>
+<td>aside</td>
+<td>Treść poboczna, np. reklamy</td>
+</tr>
+
+<tr>
+<td>footer</td>
+<td>Stopka strony</td>
+</tr>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>HEADER</h2>
+
+<p>
+Element HEADER zawiera najczęściej tytuł strony, logo,
+menu lub inne informacje znajdujące się na początku dokumentu.
+</p>
+
+<code>
+<header>
+
+<h1>Moja strona</h1>
+
+</header>
+</code>
+
+</section>
+
+<section>
+
+<h2>NAV</h2>
+
+<p>
+Element NAV przechowuje odnośniki służące do poruszania się po stronie.
+Najczęściej znajduje się pod nagłówkiem.
+</p>
+
+<code>
+<nav>
+
+<a href="#">Strona główna</a>
+<a href="#">Kontakt</a>
+
+</nav>
+</code>
+
+</section>
+
+<section>
+
+<h2>MAIN</h2>
+
+<p>
+MAIN zawiera najważniejszą treść dokumentu.
+Na jednej stronie powinien znajdować się tylko jeden element MAIN.
+</p>
+
+<code>
+<main>
+
+<p>Główna treść strony.</p>
+
+</main>
+</code>
+
+</section>
+
+<section>
+
+<h2>SECTION</h2>
+
+<p>
+SECTION służy do dzielenia treści na logiczne części tematyczne.
+Każda sekcja zwykle posiada własny nagłówek.
+</p>
+
+<code>
+<section>
+
+<h2>Aktualności</h2>
+
+<p>Treść sekcji.</p>
+
+</section>
+</code>
+
+</section>
+
+<section>
+
+<h2>ASIDE</h2>
+
+<p>
+ASIDE zawiera informacje dodatkowe powiązane z główną treścią.
+Mogą to być reklamy, linki lub ciekawostki.
+</p>
+
+<code>
+<aside>
+
+<p>Polecane artykuły</p>
+
+</aside>
+</code>
+
+</section>
+
+<section>
+
+<h2>FOOTER</h2>
+
+<p>
+FOOTER jest stopką strony lub sekcji.
+Najczęściej zawiera informacje o autorze, prawa autorskie oraz dane kontaktowe.
+</p>
+
+<code>
+<footer>
+
+<p>© 2025 Moja strona</p>
+
+</footer>
+</code>
+
+</section>
+
+<section>
+
+<h2>Przykład kompletnego układu strony</h2>
+
+<code>
+<header>
+
+<h1>Portal informacyjny</h1>
+
+</header>
+
+<nav>
+
+<a href="#">Start</a>
+<a href="#">Aktualności</a>
+
+</nav>
+
+<main>
+
+<section>
+
+<article>
+
+
+<p>Treść artykułu.</p>
+
+</article>
+
+</section>
+
+<aside>
+
+<p>Reklama</p>
+
+</aside>
+
+</main>
+
+<footer>
+
+<p>Stopka strony</p>
+
+</footer>
+</code>
+
+</section>
+
+<section>
+
+<h2>Zalety elementów semantycznych</h2>
+
+<ul>
+
+<li>Lepsza czytelność kodu.</li>
+
+<li>Łatwiejsza współpraca programistów.</li>
+
+<li>Lepsze pozycjonowanie w wyszukiwarkach.</li>
+
+<li>Większa dostępność dla osób niepełnosprawnych.</li>
+
+<li>Łatwiejsza obsługa przez czytniki ekranowe.</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h2>Podsumowanie</h2>
+
+<ul>
+
+<li>DIV jest uniwersalnym kontenerem bez znaczenia semantycznego.</li>
+
+<li>HTML5 wprowadził znaczniki opisujące rolę elementów.</li>
+
+<li>HEADER zawiera nagłówek strony.</li>
+
+<li>NAV odpowiada za nawigację.</li>
+
+<li>MAIN przechowuje główną treść.</li>
+
+<li>SECTION dzieli stronę na sekcje.</li>
+
+<li>ASIDE zawiera informacje dodatkowe.</li>
+
+<li>FOOTER jest stopką strony.</li>
+
+</ul>
+
+</section>
+
+</main>
+</main>
+<footer>Samouczek INF.03</footer>
+</body>
+</html>

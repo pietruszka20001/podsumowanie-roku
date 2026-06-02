@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pozycjonowanie</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><h1>Pozycjonowanie</h1></header>
+<nav><a href="index.html">Strona główna</a> | <a href="znaczniki.html">Znaczniki HTML</a> | <a href="tabele-listy.html">Tabele i listy</a> | <a href="a-img.html">linki i IMG</a> | <a href="css.html">Arkusze CSS</a> | <a href="model-pudelkowy.html">Model pudełkowy</a> | <a href="div-semantyka.html">DIV i HTML5</a> | <a href="pozycjonowanie.html">Pozycjonowanie</a> | <a href="formularze.html">Formularze</a> | <a href="responsywnosc-wcag.html">Responsywność i WCAG</a> | <a href="svg.html">SVG</a> |</nav>
+<main>
+<main>
+
+<section>
+
+<h2>Czym jest pozycjonowanie?</h2>
+
+<p>
+Pozycjonowanie w CSS określa sposób rozmieszczania elementów na stronie internetowej.
+Dzięki niemu można kontrolować miejsce wyświetlania obiektów,
+tworzyć układy stron, menu, banery, okna dialogowe oraz wiele innych elementów interfejsu.
+</p>
+
+<p>
+Pozycjonowanie realizowane jest głównie za pomocą właściwości
+<strong>position</strong> oraz dodatkowych właściwości takich jak:
+top, right, bottom i left.
+</p>
+
+</section>
+
+<section>
+
+<h2>Właściwość position</h2>
+
+<p>
+Właściwość position określa sposób pozycjonowania elementu.
+Najczęściej używane wartości to:
+</p>
+
+<ul>
+
+<li>static</li>
+
+<li>relative</li>
+
+<li>absolute</li>
+
+<li>fixed</li>
+
+<li>sticky</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h2>Position: static</h2>
+
+<p>
+Static jest domyślną wartością dla wszystkich elementów HTML.
+Element znajduje się w normalnym przepływie dokumentu
+i nie reaguje na właściwości top, left, right oraz bottom.
+</p>
+
+<code>
+div{
+    position: static;
+}
+</code>
+
+<p>
+W większości przypadków nie trzeba ustawiać tej wartości ręcznie.
+</p>
+
+</section>
+
+<section>
+
+<h2>Position: relative</h2>
+
+<p>
+Relative pozwala przesuwać element względem jego normalnego położenia.
+Miejsce zajmowane przez element w dokumencie pozostaje zachowane.
+</p>
+
+<code>
+div{
+
+    position: relative;
+
+    top:20px;
+
+    left:30px;
+
+}
+</code>
+
+<p>
+Element zostanie przesunięty o 20 pikseli w dół i 30 pikseli w prawo.
+</p>
+
+</section>
+
+<section>
+
+<h2>Position: absolute</h2>
+
+<p>
+Absolute usuwa element z normalnego przepływu dokumentu.
+Pozycja jest ustalana względem najbliższego elementu nadrzędnego,
+który posiada pozycjonowanie relative, absolute lub fixed.
+</p>
+
+<code>
+div{
+
+    position:absolute;
+
+    top:50px;
+
+    left:100px;
+
+}
+</code>
+
+<p>
+Element może nachodzić na inne elementy znajdujące się na stronie.
+</p>
+
+</section>
+
+<section>
+
+<h2>Position: fixed</h2>
+
+<p>
+Fixed przykleja element do określonego miejsca okna przeglądarki.
+Po przewijaniu strony jego położenie nie zmienia się.
+</p>
+
+<code>
+div{
+
+    position:fixed;
+
+    top:0;
+
+    right:0;
+
+}
+</code>
+
+<p>
+Ten typ pozycjonowania często wykorzystywany jest w menu,
+przyciskach „Powrót do góry” oraz komunikatach.
+</p>
+
+</section>
+
+<section>
+
+<h2>Position: sticky</h2>
+
+<p>
+Sticky jest połączeniem relative i fixed.
+Element zachowuje się normalnie do momentu osiągnięcia określonej pozycji,
+a następnie przykleja się do ekranu.
+</p>
+
+<code>
+div{
+
+    position:sticky;
+
+    top:0;
+
+}
+</code>
+
+<p>
+Sticky często stosowany jest w nagłówkach tabel
+oraz przyklejanych menu nawigacyjnych.
+</p>
+
+</section>
+
+<section>
+
+<h2>Właściwości top, right, bottom i left</h2>
+
+<p>
+Pozycjonowane elementy można przesuwać za pomocą dodatkowych właściwości.
+</p>
+
+<table>
+
+<tr>
+<th>Właściwość</th>
+<th>Działanie</th>
+</tr>
+
+<tr>
+<td>top</td>
+<td>Przesunięcie od górnej krawędzi</td>
+</tr>
+
+<tr>
+<td>right</td>
+<td>Przesunięcie od prawej krawędzi</td>
+</tr>
+
+<tr>
+<td>bottom</td>
+<td>Przesunięcie od dolnej krawędzi</td>
+</tr>
+
+<tr>
+<td>left</td>
+<td>Przesunięcie od lewej krawędzi</td>
+</tr>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>Z-index</h2>
+
+<p>
+Gdy elementy nachodzą na siebie,
+można określić który ma znajdować się na wierzchu.
+Służy do tego właściwość z-index.
+</p>
+
+<code>
+div{
+
+    position:absolute;
+
+    z-index:10;
+
+}
+</code>
+
+<p>
+Im większa wartość z-index, tym wyżej znajduje się element.
+</p>
+
+</section>
+
+<section>
+
+<h2>Przykład pozycjonowania absolute względem relative</h2>
+
+<code>
+.container{
+
+    position:relative;
+
+    width:400px;
+
+    height:200px;
+
+}
+
+.box{
+
+    position:absolute;
+
+    top:20px;
+
+    left:30px;
+
+}
+</code>
+
+<p>
+Element .box zostanie ustawiony względem kontenera .container.
+</p>
+
+</section>
+
+<section>
+
+<h2>Porównanie rodzajów pozycjonowania</h2>
+
+<table>
+
+<tr>
+<th>Typ</th>
+<th>Opis</th>
+</tr>
+
+<tr>
+<td>static</td>
+<td>Domyślne położenie elementu</td>
+</tr>
+
+<tr>
+<td>relative</td>
+<td>Przesunięcie względem własnej pozycji</td>
+</tr>
+
+<tr>
+<td>absolute</td>
+<td>Pozycjonowanie względem rodzica</td>
+</tr>
+
+<tr>
+<td>fixed</td>
+<td>Stała pozycja na ekranie</td>
+</tr>
+
+<tr>
+<td>sticky</td>
+<td>Przyklejanie podczas przewijania</td>
+</tr>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>Zastosowania pozycjonowania</h2>
+
+<ul>
+
+<li>Tworzenie menu nawigacyjnych.</li>
+
+<li>Przyklejane nagłówki.</li>
+
+<li>Banery reklamowe.</li>
+
+<li>Okna dialogowe.</li>
+
+<li>Galerie zdjęć.</li>
+
+<li>Przyciski „Powrót do góry”.</li>
+
+<li>Układy stron internetowych.</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h2>Podsumowanie</h2>
+
+<ul>
+
+<li>Pozycjonowanie określa położenie elementów na stronie.</li>
+
+<li>Najważniejsza właściwość to position.</li>
+
+<li>Static jest wartością domyślną.</li>
+
+<li>Relative przesuwa element względem jego pozycji.</li>
+
+<li>Absolute pozycjonuje względem rodzica.</li>
+
+<li>Fixed przykleja element do okna przeglądarki.</li>
+
+<li>Sticky łączy cechy relative i fixed.</li>
+
+<li>Z-index określa kolejność wyświetlania elementów.</li>
+
+</ul>
+
+</section>
+
+</main>
+</main>
+<footer>Samouczek INF.03</footer>
+</body>
+</html>

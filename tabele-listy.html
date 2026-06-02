@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tabele i listy</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><h1>Tabele i listy</h1></header>
+<nav><a href="index.html">Strona główna</a> | <a href="znaczniki.html">Znaczniki HTML</a> | <a href="tabele-listy.html">Tabele i listy</a> | <a href="a-img.html">linki i IMG</a> | <a href="css.html">Arkusze CSS</a> | <a href="model-pudelkowy.html">Model pudełkowy</a> | <a href="div-semantyka.html">DIV i HTML5</a> | <a href="pozycjonowanie.html">Pozycjonowanie</a> | <a href="formularze.html">Formularze</a> | <a href="responsywnosc-wcag.html">Responsywność i WCAG</a> | <a href="svg.html">SVG</a> | </nav>
+<main>
+<section>
+
+<h2>Listy w HTML</h2>
+
+<p>
+Listy służą do prezentowania informacji w uporządkowanej lub nieuporządkowanej formie.
+HTML udostępnia trzy podstawowe rodzaje list:
+</p>
+
+<ul>
+<li>Lista nieuporządkowana (ul)</li>
+<li>Lista uporządkowana (ol)</li>
+<li>Lista definicji (dl)</li>
+</ul>
+
+</section>
+
+<section>
+
+<h2>Lista nieuporządkowana - ul</h2>
+
+<p>
+Lista nieuporządkowana wyświetla elementy oznaczone punktami.
+</p>
+
+<code>
+&lt;ul&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+    &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+
+<h3>Efekt:</h3>
+
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+</ul>
+
+</section>
+
+<section>
+
+<h2>Lista uporządkowana - ol</h2>
+
+<p>
+Lista uporządkowana numeruje kolejne elementy.
+</p>
+
+<code>
+&lt;ol&gt;
+    &lt;li&gt;Uruchom komputer&lt;/li&gt;
+    &lt;li&gt;Otwórz przeglądarkę&lt;/li&gt;
+    &lt;li&gt;Wejdź na stronę&lt;/li&gt;
+&lt;/ol&gt;
+</code>
+
+<h3>Efekt:</h3>
+
+<ol>
+<li>Uruchom komputer</li>
+<li>Otwórz przeglądarkę</li>
+<li>Wejdź na stronę</li>
+</ol>
+
+</section>
+
+<section>
+
+<h2>Znacznik li</h2>
+
+<p>
+Znacznik <strong>li</strong> (list item) oznacza pojedynczy element listy.
+Może być używany zarówno w listach uporządkowanych jak i nieuporządkowanych.
+</p>
+
+<code>
+&lt;li&gt;Przykładowy element listy&lt;/li&gt;
+</code>
+
+</section>
+
+<section>
+
+<h2>Lista definicji</h2>
+
+<p>
+Lista definicji służy do przedstawiania pojęć oraz ich opisów.
+</p>
+
+<table>
+
+<tr>
+<th>Znacznik</th>
+<th>Zastosowanie</th>
+</tr>
+
+<tr>
+<td>&lt;dl&gt;</td>
+<td>Lista definicji</td>
+</tr>
+
+<tr>
+<td>&lt;dt&gt;</td>
+<td>Nazwa pojęcia</td>
+</tr>
+
+<tr>
+<td>&lt;dd&gt;</td>
+<td>Opis pojęcia</td>
+</tr>
+
+</table>
+
+<code>
+&lt;dl&gt;
+
+    &lt;dt&gt;HTML&lt;/dt&gt;
+    &lt;dd&gt;Język znaczników&lt;/dd&gt;
+
+    &lt;dt&gt;CSS&lt;/dt&gt;
+    &lt;dd&gt;Arkusze stylów&lt;/dd&gt;
+
+&lt;/dl&gt;
+</code>
+
+<h3>Efekt:</h3>
+
+<dl>
+
+<dt><strong>HTML</strong></dt>
+<dd>Język znaczników służący do tworzenia stron internetowych.</dd>
+
+<dt><strong>CSS</strong></dt>
+<dd>Język odpowiedzialny za wygląd strony.</dd>
+
+</dl>
+
+</section>
+
+<section>
+
+<h2>Tabele w HTML</h2>
+
+<p>
+Tabela umożliwia przedstawienie danych w wierszach i kolumnach.
+</p>
+
+<table>
+
+<tr>
+<th>Znacznik</th>
+<th>Opis</th>
+</tr>
+
+<tr>
+<td>&lt;table&gt;</td>
+<td>Tworzy tabelę</td>
+</tr>
+
+<tr>
+<td>&lt;tr&gt;</td>
+<td>Tworzy wiersz tabeli</td>
+</tr>
+
+<tr>
+<td>&lt;td&gt;</td>
+<td>Tworzy komórkę tabeli</td>
+</tr>
+
+<tr>
+<td>&lt;th&gt;</td>
+<td>Tworzy komórkę nagłówkową</td>
+</tr>
+
+<tr>
+<td>&lt;caption&gt;</td>
+<td>Tytuł tabeli</td>
+</tr>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>Przykład tabeli</h2>
+
+<code>
+&lt;table&gt;
+
+&lt;caption&gt;Oceny ucznia&lt;/caption&gt;
+
+&lt;tr&gt;
+    &lt;th&gt;Przedmiot&lt;/th&gt;
+    &lt;th&gt;Ocena&lt;/th&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+    &lt;td&gt;Informatyka&lt;/td&gt;
+    &lt;td&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+    &lt;td&gt;Matematyka&lt;/td&gt;
+    &lt;td&gt;4&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;/table&gt;
+</code>
+
+<h3>Efekt:</h3>
+
+<table>
+
+<caption><strong>Oceny ucznia</strong></caption>
+
+<tr>
+<th>Przedmiot</th>
+<th>Ocena</th>
+</tr>
+
+<tr>
+<td>Informatyka</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>Matematyka</td>
+<td>4</td>
+</tr>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>Łączenie komórek tabeli</h2>
+
+<p>
+Do łączenia komórek używa się atrybutów <strong>colspan</strong> oraz <strong>rowspan</strong>.
+</p>
+
+<table>
+
+<tr>
+<th>Atrybut</th>
+<th>Działanie</th>
+</tr>
+
+<tr>
+<td>colspan</td>
+<td>Łączy kolumny</td>
+</tr>
+
+<tr>
+<td>rowspan</td>
+<td>Łączy wiersze</td>
+</tr>
+
+</table>
+
+<code>
+&lt;td colspan="2"&gt;Połączone kolumny&lt;/td&gt;
+</code>
+
+</section>
+
+<section>
+
+<h2>Podsumowanie</h2>
+
+<ul>
+
+<li>ul tworzy listę nieuporządkowaną.</li>
+
+<li>ol tworzy listę uporządkowaną.</li>
+
+<li>li oznacza pojedynczy element listy.</li>
+
+<li>dl, dt i dd tworzą listę definicji.</li>
+
+<li>table tworzy tabelę.</li>
+
+<li>tr odpowiada za wiersz tabeli.</li>
+
+<li>td tworzy komórkę z danymi.</li>
+
+<li>th tworzy nagłówek tabeli.</li>
+
+<li>caption dodaje tytuł tabeli.</li>
+
+</ul>
+
+</section>
+</main>
+<footer>Samouczek INF.03</footer>
+</body>
+</html>
